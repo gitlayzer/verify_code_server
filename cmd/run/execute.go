@@ -5,7 +5,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gitlayzer/callback_platform/api"
 	"github.com/gitlayzer/callback_platform/config"
-	"html/template"
 	"log"
 	"net/http"
 	"os"
@@ -23,18 +22,9 @@ func Execute() {
 	gin.SetMode(gin.ReleaseMode)
 	// 初始化gin
 	r := gin.Default()
-	// 渲染HTML模板
-	html := template.Must(template.ParseGlob("templates/*"))
-	// 设置HTML模板
-	r.SetHTMLTemplate(html)
 	// 注册路由
 	api.RegisterRouter(r)
 	// 初始化http服务
-
-	// 判断配置文件中是否有设置监听地址，如果没有则从环境变量中获取
-	if config.Listen == "" {
-		config.Listen = os.Getenv("LISTEN")
-	}
 
 	// 初始化http服务
 	srv := &http.Server{

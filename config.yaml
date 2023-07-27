@@ -1,11 +1,19 @@
+# 默认配置
 default:
+  # 配置服务监听的端口
   listen: ":80"
 
+# 邮件服务配置
 smtp:
+  # SMTP服务器地址
   host: "smtp.163.com"
+  # SMTP服务端口
   port: "25"
-  user: "xxxxxxxxxx"
-  pass: "xxxxxxxxxx"
+  # SMTP服务账号
+  user: "example@admin.com"
+  # SMTP服务密码（并非邮箱密码）
+  pass: "xxxxxxxxxxx"
 
 domain:
-  url: "http://xxxxxx.xxxxx"
+  # 发送验证码时的地址，此地址的端口需要与default下的listen端口保持一致
+  url: "http://localhost"

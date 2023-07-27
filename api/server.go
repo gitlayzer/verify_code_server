@@ -45,16 +45,16 @@ func Verify(c *gin.Context) {
 	// 比较验证码
 	if savedCode, ok := codeMap[id]; ok {
 		if code == savedCode {
-			c.HTML(http.StatusOK, "index.tmpl", gin.H{
+			c.JSON(http.StatusOK, gin.H{
 				"message": "验证成功",
 			})
 		} else {
-			c.HTML(http.StatusUnauthorized, "index.tmpl", gin.H{
+			c.JSON(http.StatusUnauthorized, gin.H{
 				"message": "验证失败",
 			})
 		}
 	} else {
-		c.HTML(http.StatusNotFound, "index.tmpl", gin.H{
+		c.JSON(http.StatusUnauthorized, gin.H{
 			"message": "验证失败",
 		})
 	}
