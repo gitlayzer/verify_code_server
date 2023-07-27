@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .message }}</title>
+    <style>
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h2>{{ .message }}</h2>
+</body>
+<script>
+    setTimeout(function () {
+        window.close();
+    }, 10000);
+</script>
+</html>
