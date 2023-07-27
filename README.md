@@ -1,2 +1,4 @@
-# verify_code_server
-This is Simple captcha authentication platform
+# Verify Code Service（VCS）
+
+## Overview
+This is a simple email-based captcha API
