@@ -4,8 +4,8 @@ default:
 smtp:
   host: "smtp.163.com"
   port: "25"
-  user: "18037803502@163.com"
-  pass: "UHVJSTJKZXUGUTVQ"
+  user: "xxxxxxxxxx"
+  pass: "xxxxxxxxxx"
 
 domain:
-  url: "http://localhost"
+  url: "http://xxxxxx.xxxxx"
